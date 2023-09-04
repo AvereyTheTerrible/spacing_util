@@ -4,10 +4,10 @@ import pulp
 class Model:
     def __init__(self, spacer_sizes=[]) -> None:
         self.model = pulp.LpProblem(
-            name="maximize first objective", sense=pulp.LpMaximize
+            name="maximize-first-objective", sense=pulp.LpMaximize
         )
         self.model2 = pulp.LpProblem(
-            name="minimize second objective", sense=pulp.LpMinimize
+            name="minimize-second-objective", sense=pulp.LpMinimize
         )
         self.spacer_sizes = spacer_sizes
 
@@ -44,5 +44,5 @@ class Model:
 
         res = []
         for var in self.model2.variables():
-            res.append((var, var.value()))
+            res.append((str(var), var.value()))
         return res
