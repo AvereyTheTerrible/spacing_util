@@ -21,7 +21,7 @@ def run():
         lbl_res_front = ttk.Label(
             master=window,
             text=f"{pair[0]} in: ",
-            font=("Courier", 8, "bold"),
+            font=("Segoe UI", 8, "bold"),
             justify=tk.LEFT,
             anchor="w",
         )
@@ -46,6 +46,6 @@ lbl_target.grid(row=0, column=1, sticky="w")
 btn_run = ttk.Button(master=window, text="Go!", command=run)
 
 frm_entry.grid(row=0, column=0, padx=15)
-btn_run.grid(row=0, column=1, pady=15)
+btn_run.grid(row=0, column=1, pady=10)
 
 window.mainloop()
